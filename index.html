@@ -19,32 +19,32 @@
 
     <div id="welcome-section" class="flex flex-col  justify-center h-screen text-gray-100 px-6 md:px-14 xl:px-96">
             <h1 class="text-4xl"><span id="hand-wave" class="text-5xl">👋</span ><span class="font-semibold text-gray-50">Hello, i'm Muadz</span></h1>
-            <p class="text-gray-300 text-lg  mt-4 ">Computer Engineering student with experience in web development. Passionate about optimizing system performance and web technologies. Currently seeking an internship to apply my technical knowledge and skills, and to contribute to innovative projects in the tech industry.</p>
+            <p class="text-gray-200 text-lg  mt-4 ">Computer Engineering student with experience in web development. Passionate about optimizing system performance and web technologies. Currently seeking an internship to apply my technical knowledge and skills, and to contribute to innovative projects in the tech industry.</p>
     </div>
 
     <div class="pt-20 md:px-10">
-        <h2 class="text-5xl text-center text-gray-200" style="font-family: 'Brush Script MT', cursive;">My Project</h2>
-        <div id="projects" class="grid grid-cols-2 lg:grid-cols-4">
+        <h2 class="text-5xl text-center text-gray-200 mb-2" style="font-family: 'Brush Script MT', cursive;">My Project</h2>
+        <div id="projects" class="grid grid-cols-2 gap-1 md:gap-4 xl:gap-8 lg:grid-cols-4 p-1">
 
         </div>
     </div>
 
     <div id="contact" class="flex flex-col h-screen w-full pt-18 flex items-center justify-center -mb-10">
         <h2 class="text-5xl text-center text-white" style="font-family: 'Brush Script MT', cursive;">Contact Me</h2>
-        <div class="flex flex-col sm:flex-row w-full justify-center items-center text-white mt-6">
-            <div class="sm:w-1/4 text-center">
+        <div class="flex w-full justify-center gap-4 xl:gap-10 items-center text-white mt-6">
+            <a href="mailto:muadzihharul@gmail.com" class="flex text-center">
+                <i class="fa fa-envelope text-2xl mr-1"></i>
                 <h2 class="text-2xl">Gmail</h2>
-                <p>muadzihharul@gmail.com</p>
-            </div>
-            <div class="my-5 sm:w-1/4 mx-10 text-center">
-                <h2 class="text-2xl">Instagram</h2>
-                <a href="https://www.instagram.com/mzi._haq/"><i class="fa fa-instagram mr-2 p-1 bg-[#c13584]"></i>mzi._haq</a>
-                <p></p>
-            </div>
-            <div class="sm:w-1/4 text-center">
+            </a>
+            <a href="https://github.com/maviism" class="flex">
+                <i class="fa fa-github text-2xl mr-1"></i>
+            <h2 class="text-2xl">Github</h2>
+            </a>
+            <a href="https://www.linkedin.com/in/muadz/" class="flex text-center">
+                <i class="fa fa-linkedin-square text-2xl mr-1"></i>
                 <h2 class="text-2xl">LinkedIn</h2>
-                <a href="https://www.linkedin.com/in/muadz/" target="_blank"><i class="fa fa-linkedin mr-2 bg-[#0077b5] p-1"></i>Muadz</a>   
-            </div>
+            </a>
+            
         </div>
     </div>
 
@@ -59,20 +59,20 @@
 
         project.forEach((item, index) => {
             let div = document.createElement('div');
-            div.classList.add('bg-gray-200', 'm-2', 'p-2', 'rounded');
+            div.classList.add('bg-gray-200', 'p-2', 'rounded');
             div.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" class="h-28 md:h-56 bg-contain">
+                <img src="${item.image}" alt="${item.name}" loading="lazy" class="h-28 md:h-56 bg-contain">
                 <h2 class="text-lg leading-5 md:text-2xl font-semibold">${item.name}</h2>
-                ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-500 hover:underline">Demo</a>` : ''}
-                ${item.github ? `<a href="${item.github}" target="_blank" class="text-blue-500 hover:underline">Github</a>` : ''}
+                ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-500 underline text-xs">Demo</a>` : ''}
+                ${item.github ? `<a href="${item.github}" target="_blank" class="text-blue-500 underline text-xs">Github</a>` : ''}
                 <p class="text-sm leading-4 my-1">${item.description}</p>
                 <div class="flex flex-wrap gap-1">
                     ${item.tags.split(',').map(tag => {
                         const trimmedTag = tag.trim();
                         const style = tagStyles[trimmedTag] || { color: 'bg-gray-600', icon: '' }; // Default style jika tag tidak ditemukan
                         return `
-                            <p class="${style.color} px-2 text-xs font-medium py-1 rounded text-gray-200 mr-1 flex items-center">
-                                <img src="${style.icon}" alt="${trimmedTag} icon" class="w-4 h-4 mr-1"/> ${trimmedTag}
+                            <p class="${style.color} px-2 text-xs font-medium py-1 rounded text-gray-200 flex items-center">
+                                <img loading="lazy" src="${style.icon}" alt="${trimmedTag} icon" class="w-4 h-4 mr-1"/> ${trimmedTag}
                             </p>`;
                     }).join('')}
                 </div>
