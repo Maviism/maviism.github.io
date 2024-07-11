@@ -2,101 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muadz | Portofolio</title>
+    <title>Muadz | Web Portofolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        * {
-            margin-top: 0;
-            padding: 0;
-        }
-
-        #hand-wave {
-            animation-name: wave-animation;
-            animation-duration: 2.5s;
-            animation-iteration-count: infinite;
-            transform-origin: 70% 70%;
-            display: inline-block;
-        }
-
-        @keyframes wave-animation {
-            0% {
-                transform: rotate(0deg);
-            }
-            15% {
-                transform: rotate(14deg);
-            }
-            30% {
-                transform: rotate(-8deg);
-            }
-            40% {
-                transform: rotate(14deg);
-            }
-            50% {
-                transform: rotate(-4deg);
-            }
-            60% {
-                transform: rotate(10deg);
-            }
-            70% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(0deg);
-            }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="public/style.css">
 </head>
 <body class="relative bg-[#004aad]">
-    <nav class="bg-blue-500 bg-opacity-25 fixed h-16 w-full flex items-center justify-center">
-        <ul class="flex justify-center text-lg font-bold">
-            <li class="text-pink-600 hover:text-pink-700 hover:text-xl"><a href="#home" class="">Home</a></li>
-            <li class="text-yellow-600 hover:text-yellow-700 hover:text-xl mx-6"><a href="#project">Project</a></li>
-            <li class="text-green-600 hover:text-green-700 hover:text-xl"><a href="#contact">Contact</a></li>
+    <nav id="navbar" class="bg-blue-700/[0.6] fixed h-16 w-full flex items-center justify-center">
+        <ul class="flex justify-center text-lg font-semibold">
+            <li class="text-gray-100 hover:text-gray-300 hover:text-xl tracking-wider"><a href="#welcome-section" class="">Home</a></li>
+            <li class="text-gray-100 hover:text-gray-300 hover:text-xl mx-6 tracking-wider"><a href="#projects">Project</a></li>
+            <li class="text-gray-100 hover:text-gray-300 hover:text-xl hover:text-xl tracking-wider"><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <div id="home" class="flex items-center justify-center h-screen text-gray-100">
-        <div>
-            <h1 class="text-4xl text-center"><span id="hand-wave" class="text-5xl">👋</span>Hello, i'm Muadz</h1>
-            <p class="text-center text-2xl mt-2">Computer Engineering student at BANÜ</p>
-
-        </div>
+    <div id="welcome-section" class="flex flex-col  justify-center h-screen text-gray-100 px-6 md:px-14 xl:px-96">
+            <h1 class="text-4xl"><span id="hand-wave" class="text-5xl">👋</span ><span class="font-semibold text-gray-50">Hello, i'm Muadz</span></h1>
+            <p class="text-gray-300 text-lg  mt-4 ">Computer Engineering student with experience in web development. Passionate about optimizing system performance and web technologies. Currently seeking an internship to apply my technical knowledge and skills, and to contribute to innovative projects in the tech industry.</p>
     </div>
 
-    <div id="project" class="sm:h-screen pt-20">
+    <div class="pt-20 md:px-10">
         <h2 class="text-5xl text-center text-gray-200" style="font-family: 'Brush Script MT', cursive;">My Project</h2>
-        <div class="flex flex-col sm:flex-row justify-center">
-            <div class="bg-gray-200 sm:w-1/4 m-2 p-2 rounded drop-shadow">
-                <img src="images/ppibandirma.png" alt="PPI Bandirma">
-                <h2 class="text-2xl">PPI Bandirma - Organisation system</h2>
-                <p>Website organisasi untuk mengelola database anggota dan beberapa fitur lainya untuk mendukung kinerja organisasi.</p>
-                <div class="flex mt-1">
-                    <p class="bg-red-600 px-2 py-1 rounded text-white mr-1">Laravel</p>
-                    <p class="bg-green-600 px-2 py-1 rounded text-white mr-1">Livewire</p>
-                    <p class="bg-blue-800 px-2 py-1 rounded text-white">Tailwind</p>
-                </div>
-            </div>
-            <div class="bg-gray-200 sm:w-1/4 m-2 p-2 rounded">
-                <img src="images/musta.png" alt="Musta">
-                <h2 class="text-2xl">Voting system</h2>
-                <p>website untuk mengumpulkan hasil voting.</p>
-                <div class="flex mt-1">
-                    <p class="bg-red-600 px-2 py-1 rounded text-white mr-1">Laravel</p>
-                    <p class="bg-green-600 px-2 py-1 rounded text-white mr-1">Livewire</p>
-                    <p class="bg-blue-800 px-2 py-1 rounded text-white">Tailwind</p>
-                </div>
-            </div>
-            <div class="bg-gray-200 sm:w-1/4 m-2 p-2 rounded">
-                <img src="images/store-management.png" alt="Store management">
-                <h2 class="text-2xl">Store management</h2>
-                <p>Aplikasi windows untuk mengelola produk yang ada di toko. Terdapat fitur kasir dan juga laporan keuangan bulanan</p>
-                <div class="flex mt-1">
-                    <p class="bg-red-600 px-2 py-1 rounded text-white mr-1">C#</p>
-                    <p class="bg-green-600 px-2 py-1 rounded text-white mr-1">WPF</p>
-                    <p class="bg-pink-600 px-2 py-1 rounded text-white">Microsoft SQL</p>
-                </div>
-            </div>
+        <div id="projects" class="grid grid-cols-2 lg:grid-cols-4">
+
         </div>
     </div>
 
@@ -118,107 +47,41 @@
             </div>
         </div>
     </div>
-    <span id="flake0" style="cursor: default; user-select: none; position: absolute; font-family: inherit; font-size: 19px; color: rgb(221, 221, 221); z-index: 1000; left: 226px; top: 561px;">•</span>
 
     <div id="footer" class="flex items-center bg-gray-900 h-10 text-center justify-center">
         <p class="text-white">Made with 💞💞💞</p>
     </div>
 
-    <script>
-    // Amount of Snowflakes
-    var snowMax = 50;
+    <script type="module">
+        import { project, tagStyles } from './public/data.js';
 
-    // Snowflake Colours
-    var snowColor = ["#DDD", "#EEE"];
+        let projectContainer = document.getElementById('projects');
 
-    // Snow Entity
-    var snowEntity = "&#x2022;";
-    // Falling Velocity
-    var snowSpeed = 0.75;
-
-    // Minimum Flake Size
-    var snowMinSize = 8;
-
-    // Maximum Flake Size
-    var snowMaxSize = 24;
-
-    // Refresh Rate (in milliseconds)
-    var snowRefresh = 50;
-
-    // Additional Styles
-    var snowStyles = "cursor: default; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;";
-
-    /*
-    // End of Configuration
-    // ----------------------------------------
-    // Do not modify the code below this line
-    */
-
-    var snow = [],
-        pos = [],
-        coords = [],
-        lefr = [],
-        marginBottom,
-        marginRight;
-
-    function randomise(range) {
-        rand = Math.floor(range * Math.random());
-        return rand;
-    }
-
-    function initSnow() {
-        var snowSize = snowMaxSize - snowMinSize;
-        marginBottom = document.body.scrollHeight - 5;
-        marginRight = document.body.clientWidth - 15;
-
-        for (i = 0; i <= snowMax; i++) {
-            coords[i] = 0;
-            lefr[i] = Math.random() * 15;
-            pos[i] = 0.03 + Math.random() / 10;
-            snow[i] = document.getElementById("flake" + i);
-            snow[i].style.fontFamily = "inherit";
-            snow[i].size = randomise(snowSize) + snowMinSize;
-            snow[i].style.fontSize = snow[i].size + "px";
-            snow[i].style.color = snowColor[randomise(snowColor.length)];
-            snow[i].style.zIndex = 1000;
-            snow[i].sink = snowSpeed * snow[i].size / 5;
-            snow[i].posX = randomise(marginRight - snow[i].size);
-            snow[i].posY = randomise(2 * marginBottom - marginBottom - 2 * snow[i].size);
-            snow[i].style.left = snow[i].posX + "px";
-            snow[i].style.top = snow[i].posY + "px";
-        }
-
-        moveSnow();
-    }
-
-    function resize() {
-        marginBottom = document.body.scrollHeight - 5;
-        marginRight = document.body.clientWidth - 15;
-    }
-
-    function moveSnow() {
-        for (i = 0; i <= snowMax; i++) {
-            coords[i] += pos[i];
-            snow[i].posY += snow[i].sink;
-            snow[i].style.left = snow[i].posX + lefr[i] * Math.sin(coords[i]) + "px";
-            snow[i].style.top = snow[i].posY + "px";
-
-            if (snow[i].posY >= marginBottom - 2 * snow[i].size || parseInt(snow[i].style.left) > (marginRight - 3 * lefr[i])) {
-                snow[i].posX = randomise(marginRight - snow[i].size);
-                snow[i].posY = 0;
-            }
-        }
-
-        setTimeout("moveSnow()", snowRefresh);
-    }
-
-    for (i = 0; i <= snowMax; i++) {
-        document.write("<span id='flake" + i + "' style='" + snowStyles + "position:absolute;top:-" + snowMaxSize + "'>" + snowEntity + "</span>");
-    }
-
-    window.addEventListener('resize', resize);
-    window.addEventListener('load', initSnow);
+        project.forEach((item, index) => {
+            let div = document.createElement('div');
+            div.classList.add('bg-gray-200', 'm-2', 'p-2', 'rounded');
+            div.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="h-28 md:h-56 bg-contain">
+                <h2 class="text-lg leading-5 md:text-2xl font-semibold">${item.name}</h2>
+                ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-500 hover:underline">Demo</a>` : ''}
+                ${item.github ? `<a href="${item.github}" target="_blank" class="text-blue-500 hover:underline">Github</a>` : ''}
+                <p class="text-sm leading-4 my-1">${item.description}</p>
+                <div class="flex flex-wrap gap-1">
+                    ${item.tags.split(',').map(tag => {
+                        const trimmedTag = tag.trim();
+                        const style = tagStyles[trimmedTag] || { color: 'bg-gray-600', icon: '' }; // Default style jika tag tidak ditemukan
+                        return `
+                            <p class="${style.color} px-2 text-xs font-medium py-1 rounded text-gray-200 mr-1 flex items-center">
+                                <img src="${style.icon}" alt="${trimmedTag} icon" class="w-4 h-4 mr-1"/> ${trimmedTag}
+                            </p>`;
+                    }).join('')}
+                </div>
+            `;
+            projectContainer.appendChild(div);
+        });
+        
     </script>
+    
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
