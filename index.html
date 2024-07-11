@@ -61,7 +61,7 @@
             let div = document.createElement('div');
             div.classList.add('bg-gray-200', 'p-2', 'rounded');
             div.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" loading="lazy" class="h-28 md:h-56 bg-contain">
+                <img src="${item.image}" alt="${item.name}" loading="lazy" class="h-28 md:h-44 xl:h-56 object-cover">
                 <h2 class="text-lg leading-5 md:text-2xl font-semibold">${item.name}</h2>
                 ${item.link ? `<a href="${item.link}" target="_blank" class="text-blue-500 underline text-xs">Demo</a>` : ''}
                 ${item.github ? `<a href="${item.github}" target="_blank" class="text-blue-500 underline text-xs">Github</a>` : ''}
